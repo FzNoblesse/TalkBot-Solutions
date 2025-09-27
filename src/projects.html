@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Proyectos - Tecnova</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex items-center">
+          <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+          <span class="ml-2 text-xl font-bold text-gray-800">Tecnova</span>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+            <a href="index.html#servicios" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+            <a href="projects.html" class="text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+            <a href="index.html#nosotros" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+            <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="gradient-bg text-black py-20">
+    <div class="max-w-7xl mx-auto px-4 text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Nuestros Proyectos</h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto">
+        Conoce en detalle algunos de los desarrollos que hemos realizado para ayudar a PYMES a crecer en el mundo digital.
+      </p>
+    </div>
+  </header>
+
+  <!-- Projects grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10">
+        
+        <div id="proyecto1" class="project-card bg-gray-50 p-8 rounded-xl transition duration-300" data-aos="fade-up">
+          <i data-feather="shopping-cart" class="text-blue-600 w-10 h-10 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">E-commerce Moda Sostenible</h3>
+          <p class="text-gray-600 mb-4">Desarrollo de tienda online con chatbot para asesoramiento en tiempo real, aumentando ventas en un 45%.</p>
+        </div>
+        
+        <div id="proyecto2" class="project-card bg-gray-50 p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+          <i data-feather="calendar" class="text-blue-600 w-10 h-10 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Sistema de Reservas Restaurante</h3>
+          <p class="text-gray-600 mb-4">Chatbot que gestiona reservas, recomienda menú y resuelve preguntas frecuentes automáticamente.</p>
+        </div>
+        
+        <div class="project-card bg-gray-50 p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+          <i data-feather="briefcase" class="text-blue-600 w-10 h-10 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Portal Empresarial</h3>
+          <p class="text-gray-600 mb-4">Diseño de intranet corporativa con gestión documental y comunicación interna para mejorar productividad.</p>
+        </div>
+        
+        <div class="project-card bg-gray-50 p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+          <i data-feather="credit-card" class="text-blue-600 w-10 h-10 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Plataforma de Pagos</h3>
+          <p class="text-gray-600 mb-4">Sistema seguro de pagos online integrado a plataformas de e-commerce y apps móviles.</p>
+        </div>
+        
+        <div class="project-card bg-gray-50 p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="400">
+          <i data-feather="activity" class="text-blue-600 w-10 h-10 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Panel de Analítica</h3>
+          <p class="text-gray-600 mb-4">Dashboard interactivo con métricas clave en tiempo real para la toma de decisiones de negocios.</p>
+        </div>
+        
+        <div class="project-card bg-gray-50 p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="500">
+          <i data-feather="users" class="text-blue-600 w-10 h-10 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">App de Comunidad</h3>
+          <p class="text-gray-600 mb-4">Aplicación móvil para conectar clientes y negocios con foros, chat y notificaciones personalizadas.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-400">© 2025 Tecnova. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+    feather.replace();
+  </script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnova - Soluciones Digitales para PYMES</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-800">Tecnova</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#" class="text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#servicios" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                        <a href="#proyectos" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                        <a href="#nosotros" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+                        <a href="#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Impulsa tu negocio con soluciones digitales</h1>
+                    <p class="text-xl mb-8">Chatbots inteligentes y páginas web diseñadas para aumentar tus ventas y mejorar la atención al cliente.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contacto" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Contáctanos</a>
+                        <a href="#proyectos" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">Ver Proyectos</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="http://static.photos/technology/1024x576/1" alt="Tecnología" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Proyectos Destacados -->
+    <section id="proyectos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestros Proyectos</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Algunos ejemplos de nuestro trabajo para clientes satisfechos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="shopping-cart" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">E-commerce para Moda Sostenible</h3>
+                    <p class="text-gray-600 mb-4">Desarrollo de tienda online con chatbot integrado para asesoramiento de productos, aumentando las ventas en un 45%.</p>
+                    <a href="projects.html#proyecto1" class="text-blue-600 font-medium hover:underline">Ver proyecto completo →</a>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl transition duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="calendar" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sistema de Reservas para Restaurante</h3>
+                    <p class="text-gray-600 mb-4">Chatbot de atención al cliente que gestiona reservas, recomendaciones del menú y preguntas frecuentes.</p>
+                    <a href="projects.html#proyecto2" class="text-blue-600 font-medium hover:underline">Ver proyecto completo →</a>
+                </div>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up">
+                <a href="projects.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                    Ver todos nuestros proyectos
+                    <i data-feather="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Soluciones personalizadas para hacer crecer tu negocio en el mundo digital</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="message-square" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Chatbots de Ventas</h3>
+                    <p class="text-gray-600">Asistentes virtuales que guían a tus clientes en el proceso de compra, aumentando conversiones y ventas las 24/7.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="headphones" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Chatbots de Atención</h3>
+                    <p class="text-gray-600">Resuelve dudas frecuentes, agenda citas y ofrece soporte inmediato a tus clientes sin necesidad de personal adicional.</p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="globe" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Desarrollo Web</h3>
+                    <p class="text-gray-600">Páginas web profesionales, rápidas y optimizadas para convertir visitantes en clientes y posicionarte en internet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resto del código se mantiene igual (Nosotros, Testimonios, Contacto, Footer) -->
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/office/1024x576/2" alt="Equipo Tecnova" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">¿Quiénes somos?</h2>
+                    <p class="text-gray-600 mb-6">En Tecnova nos especializamos en crear soluciones digitales accesibles para pequeñas y medianas empresas. Nuestro objetivo es democratizar la tecnología para que cualquier negocio pueda competir en el mercado digital.</p>
+                    <p class="text-gray-600 mb-8">Con más de 5 años de experiencia, hemos ayudado a más de 200 PYMES a mejorar sus ventas y atención al cliente mediante chatbots inteligentes y páginas web efectivas.</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="award" class="text-blue-600 w-6 h-6"></i>
+                        </div>
+                        <p class="text-gray-800 font-medium">Soluciones probadas con resultados reales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Lo que dicen nuestros clientes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Empresas que han transformado su negocio con nuestras soluciones</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"El chatbot de ventas aumentó nuestras conversiones en un 30% en el primer mes. ¡Increíble!"</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/1" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Méndez</h4>
+                            <p class="text-gray-500 text-sm">Tienda de electrónicos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Ahora respondemos el 80% de las consultas sin intervención humana. Nuestros clientes están encantados."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/2" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana Rodríguez</h4>
+                            <p class="text-gray-500 text-sm">Clínica dental</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Nuestra nueva página web ha duplicado las visitas y las reservas online. El mejor inversión que hemos hecho."</p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/3" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Luis García</h4>
+                            <p class="text-gray-500 text-sm">Restaurante</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">¿Listo para transformar tu negocio?</h2>
+                    <p class="text-xl mb-8">Déjanos tus datos y nos pondremos en contacto contigo para ofrecerte la mejor solución para tu empresa.</p>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="mail" class="w-6 h-6 mr-3"></i>
+                        <span>contacto@tecnovasoluciones.com</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="phone" class="w-6 h-6 mr-3"></i>
+                        <span>+52 55 1234 5678</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-feather="map-pin" class="w-6 h-6 mr-3"></i>
+                        <span>Ciudad de México, México</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <form class="bg-white p-8 rounded-lg shadow-xl">
+                        <div class="mb-6">
+                            <label for="nombre" class="block text-gray-800 font-medium mb-2">Nombre</label>
+                            <input type="text" id="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tu nombre">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-800 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="empresa" class="block text-gray-800 font-medium mb-2">Empresa</label>
+                            <input type="text" id="empresa" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nombre de tu empresa">
+                        </div>
+                        <div class="mb-6">
+                            <label for="servicio" class="block text-gray-800 font-medium mb-2">Servicio de interés</label>
+                            <select id="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Selecciona una opción</option>
+                                <option value="chatbot-ventas">Chatbot de Ventas</option>
+                                <option value="chatbot-atencion">Chatbot de Atención</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="varios">Varios servicios</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition duration-300">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="cpu" class="text-blue-400 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold">Tecnova</span>
+                    </div>
+                    <p class="text-gray-400">Soluciones digitales para hacer crecer tu negocio en la era digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Chatbots de Ventas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Chatbots de Atención</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Desarrollo Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Consultoría Digital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="#proyectos" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Tecnova. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        feather.replace();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
