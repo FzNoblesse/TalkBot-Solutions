@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
 
     // 3. Configura Nodemailer (USA VARIABLES DE ENTORNO DE VERCEL)
     let transporter = nodemailer.createTransport({
-        host: "smtp.office3365.com", // Nota: El host SMTP de Outlook es smtp.office365.com
+        host: "smtp.office365.com", // Nota: El host SMTP de Outlook es smtp.office365.com
         port: 587,
         secure: false, 
         auth: {
