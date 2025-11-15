@@ -25,7 +25,7 @@ module.exports = async (req, res) =>
                             subject: `Nuevo prospecto: ${nombre}`,
                             reply_to: email, 
                             html: `
-                            <h2>Nuevo contacto desde la web TalkBot Solutions</h2>
+                            <h2> Nueva petición desde la web TalkBot Solutions </h2>
                             <p><strong>Nombre:</strong> ${nombre}</p>
                             <p><strong>Email del cliente:</strong> ${email}</p>
                             <p><strong>Empresa:</strong> ${empresa || 'No especificada'}</p>
