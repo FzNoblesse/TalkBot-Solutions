@@ -131,7 +131,7 @@
                     <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                         <i data-feather="sliders" class="text-blue-600 w-8 h-8"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Automatización de Áreas</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Automatización de procesos</h3>
                     <p class="text-gray-600">Optimizamos los flujos de trabajo de tu empresa mediante tecnología. Desde chatbots para atención al cliente hasta la digitalización de tareas repetitivas para que tu equipo sea más productivo.</p>
                 </div>
             
@@ -272,28 +272,42 @@
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
                     <form class="bg-white p-8 rounded-lg shadow-xl">
                         <div class="mb-6">
-                            <label for="nombre" class="block text-gray-800 font-medium mb-2">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tu nombre" required>
+                            <label for="nombre" class="block text-gray-800 font-medium mb-2">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:blue-500 focus:border-transparent" placeholder="Tu nombre" required>
                         </div>
-                        <div class="mb-6">
-                            <label for="email" class="block text-gray-800 font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="tu@email.com" required>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="email" class="block text-gray-800 font-medium mb-2">Correo electrónico</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="tu@email.com" required>
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-gray-800 font-medium mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="55 1234 5678">
+                            </div>
                         </div>
+                        
                         <div class="mb-6">
-                            <label for="empresa" class="block text-gray-800 font-medium mb-2">Empresa</label>
-                            <input type="text" id="empresa" name="empresa" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nombre de tu empresa" required>
+                            <label for="empresa" class="block text-gray-800 font-medium mb-2">Nombre de tu empresa o negocio</label>
+                            <input type="text" id="empresa" name="empresa" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Ej. Abarrotes La Esperanza" required>
                         </div>
+                        
                         <div class="mb-6">
-                            <label for="servicio" class="block text-gray-800 font-medium mb-2">Servicio de interés</label>
+                            <label for="servicio" class="block text-gray-800 font-medium mb-2">¿En qué servicio estás interesado?</label>
                             <select id="servicio" name="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                                 <option value="">Selecciona una opción</option>
-                                <option value="chatbot-ventas">Chatbot de Ventas</option>
-                                <option value="chatbot-atencion">Chatbot de Atención</option>
-                                <option value="desarrollo-web">Desarrollo Web</option>
-                                <option value="varios">Varios servicios</option>
+                                <option value="automatizacion">Automatización de procesos</option>
+                                <option value="diseno-web">Diseño y Desarrollo Web</option>
+                                <option value="sistemas-medida">Desarrollo de Sistemas a Medida</option>
+                                <option value="otro">Otro</option>
                             </select>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition duration-300">Enviar mensaje</button>
+                        
+                        <div class="mb-6">
+                            <label for="mensaje" class="block text-gray-800 font-medium mb-2">Cuéntanos sobre tu proyecto</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Describe brevemente qué necesitas o qué problema quieres resolver..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition duration-300 shadow-lg transform hover:-translate-y-1">Enviar mensaje</button>
                     </form>
                 </div>
             </div>
