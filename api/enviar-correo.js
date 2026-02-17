@@ -13,9 +13,16 @@ module.exports = async (req, res) => {
         return res.status(400).json({ message: 'Nombre y correo son requeridos' });
     }
 
-    const fecha = new Date().toLocaleDateString('es-MX', { 
-        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' 
-    });
+    const fecha = new Date().toLocaleString('es-MX',
+        { 
+            timeZone: 'America/Mexico_City',
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
 
     const logoUrl = 'https://www.talkbotsolutions.com.mx/images/talkbot_minimalista_logo.png';
 
