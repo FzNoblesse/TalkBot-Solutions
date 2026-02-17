@@ -10,37 +10,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const form = document.querySelector("#contacto form"); 
 
-form.addEventListener("submit", async e =>
-  {
+form.addEventListener("submit", async e => {
     e.preventDefault();
     const formData = new FormData(form);
-    const data =
-    {
+
+    const data = {
       nombre: formData.get('nombre'),
       email: formData.get('email'),
+      telefono: formData.get('telefono'),
       empresa: formData.get('empresa'),
-      servicio: formData.get('servicio')
+      servicio: formData.get('servicio'),
+      mensaje: formData.get('mensaje')
     };
-    try
-    {
-      const response = await fetch('/api/enviar-correo',
-        {
+
+    try {
+      const response = await fetch('/api/enviar-correo', {
           method: 'POST',
-          headers: 
-          {
+          headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(data)
         });  
-        if (!response.ok)
-          {
+        
+        if (!response.ok) {
             throw new Error('Hubo un problema al enviar el mensaje.');
-          }
-          alert("¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.");
-          form.reset();
-    }
-    catch (error)
-    {
+        }
+        alert("¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.");
+        form.reset();
+    } catch (error) {
       console.error('Error:', error);
       alert('Lo sentimos, algo salió mal. Por favor, intenta de nuevo.');
     }
