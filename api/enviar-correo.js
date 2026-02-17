@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' 
     });
 
-    const logoUrl = 'https://talkbotsolutions.com/images/talkbot_minimalista_logo.png';
+    const logoUrl = 'https://www.talkbotsolutions.com.mx/images/talkbot_minimalista_logo.png';
 
     try {
         const data = await resend.emails.send({
