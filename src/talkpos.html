@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkPOS - Punto de Venta | TalkBot Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-800">TalkBot Solutions</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="projects.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <div class="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-bold mb-4">Punto de Venta</div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">TalkPOS: Ventas a granel sin complicaciones</h1>
+                <p class="text-lg mb-8 text-blue-100">
+                    El sistema de punto de venta definitivo para carnicerías, abarrotes y fruterías. Calcula precios por peso automáticamente y mantén tu inventario bajo control.
+                </p>
+                <a href="#precios" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition duration-300 shadow-lg inline-block">
+                    Ver Planes y Precios
+                </a>
+            </div>
+            <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
+                <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
+                    <img src="http://static.photos/technology/800x600/1" alt="Interfaz de TalkPOS" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Diseñado para la velocidad de tu negocio</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="link" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Integración con Básculas</h3>
+                    <p class="text-gray-600">Olvídate de calcular a mano. TalkPOS lee el peso directamente de tu báscula y calcula el precio exacto al instante.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="box" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Control de Inventario</h3>
+                    <p class="text-gray-600">Lleva el registro exacto de tus existencias. Evita mermas y sabe siempre cuándo es momento de resurtir tus productos.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="monitor" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">PC y Android</h3>
+                    <p class="text-gray-600">Opera desde la computadora de tu mostrador o utiliza dispositivos Android para mayor flexibilidad en tu piso de ventas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Elige el plan ideal para ti</h2>
+                <p class="text-xl text-gray-600">Inversión transparente para hacer crecer tu negocio</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition flex flex-col" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-gray-800">Plan Estándar</h3>
+                    <p class="text-gray-500 mt-2">Ideal para tiendas de artículos por pieza</p>
+                    <div class="mt-6 mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">$---</span>
+                        <span class="text-gray-500">/pago único</span> </div>
+                    <ul class="space-y-4 text-gray-600 flex-grow mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5"></i> Gestión de inventario</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5"></i> Registro de ventas e ingresos</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5"></i> Compatible con PC y Android</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5"></i> Soporte técnico básico</li>
+                    </ul>
+                    <a href="https://wa.me/528341672550?text=Hola,%20me%20interesa%20adquirir%20el%20Plan%20Estándar%20de%20TalkPOS" target="_blank" class="w-full bg-blue-100 text-blue-700 text-center py-4 rounded-xl font-bold hover:bg-blue-200 transition">
+                        Contratar Estándar
+                    </a>
+                </div>
+
+                <div class="bg-white border-2 border-blue-600 rounded-2xl p-8 shadow-xl relative flex flex-col transform md:-translate-y-4" data-aos="fade-left">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Recomendado</div>
+                    <h3 class="text-2xl font-bold text-gray-800">Plan Granel & Peso</h3>
+                    <p class="text-gray-500 mt-2">El poder total para carnicerías y abarrotes</p>
+                    <div class="mt-6 mb-8">
+                        <span class="text-5xl font-extrabold text-blue-600">$---</span>
+                        <span class="text-gray-500">/pago único</span>
+                    </div>
+                    <ul class="space-y-4 text-gray-600 flex-grow mb-8">
+                        <li class="flex items-center"><i data-feather="check" class="text-blue-600 mr-3 w-5 h-5 font-bold"></i> Todo lo del Plan Estándar</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-blue-600 mr-3 w-5 h-5 font-bold"></i> Integración directa con básculas</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-blue-600 mr-3 w-5 h-5 font-bold"></i> Cálculo dinámico de precio por peso</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-blue-600 mr-3 w-5 h-5 font-bold"></i> Soporte técnico prioritario</li>
+                    </ul>
+                    <a href="https://wa.me/528341672550?text=Hola,%20me%20interesa%20adquirir%20el%20Plan%20Granel%20y%20Peso%20de%20TalkPOS" target="_blank" class="w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">
+                        Contratar Ahora
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <i data-feather="cpu" class="text-blue-400 w-6 h-6"></i>
+                <span class="ml-2 text-lg font-bold">TalkBot Solutions</span>
+            </div>
+            <p class="text-gray-400">© 2026 TalkBot Solutions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        feather.replace();
+    </script>
+</body>
+</html>
