@@ -1,7 +1,7 @@
 {
-  "version_actual": "1.0.1",
+  "version_actual": "1.0.0",
   "obligatorio": false,
-  "novedades": "• Versión inicial con prueba gratuita de 7 días.\n• ¡Utiliza nuestro sistema por una semana y al final decides si adquirirlo o no!",
+  "novedades": "• Versión inicial con prueba gratuita de 7 días.",
   "url_windows": "https://www.talkbotsolutions.com.mx/descargas/Instalar_TalkPOS_v1.0.0.exe",
   "url_android": "https://www.talkbotsolutions.com.mx/descargas/TalkPOS_v1.0.0.apk"
 }
