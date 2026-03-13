@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por descargar! | TalkBot Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Poppins', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm p-4 text-center">
+        <a href="index.html" class="inline-flex items-center text-xl font-bold text-gray-800">
+            <i data-feather="cpu" class="text-blue-600 w-8 h-8 mr-2"></i> TalkBot Solutions
+        </a>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center py-12 px-4 text-center">
+        <div class="max-w-2xl bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-feather="check" class="text-green-600 w-10 h-10"></i>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800 mb-4">¡Gracias por probar TalkPOS!</h1>
+            <p class="text-xl text-gray-600 mb-6">Tu descarga comenzará automáticamente en unos segundos...</p>
+            
+            <div class="bg-blue-50 rounded-xl p-6 text-left mb-8">
+                <h3 class="font-bold text-blue-800 mb-2"><i data-feather="help-circle" class="w-5 h-5 inline mr-1 pb-1"></i> ¿No inició la descarga?</h3>
+                <p class="text-sm text-blue-700">Si la descarga no comienza automáticamente, haz clic en el siguiente enlace:</p>
+                <a href="#" id="enlace-manual" class="font-bold text-blue-600 underline mt-2 inline-block">Descargar manualmente</a>
+            </div>
+
+            <a href="talkpos.html" class="text-gray-500 hover:text-blue-600 font-medium transition">
+                <i data-feather="arrow-left" class="w-4 h-4 inline pb-1"></i> Volver a la página principal
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="cpu" class="text-blue-400 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold">TalkBot Solutions</span>
+                    </div>
+                    <p class="text-gray-400">Soluciones digitales para hacer crecer tu negocio en la era digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Automatización de Procesos</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Diseño y Desarrollo Web</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Desarrollo de Sistemas a Medida</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2026 TalkBot Solutions. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                    <a href="https://www.instagram.com/talkbot_solutions?igsh=dDJ3cXNpYXljaWFo" target="_blank" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        // Lógica para iniciar la descarga automáticamente
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const os = urlParams.get('os');
+            let downloadLink = "";
+
+            // Asignar el archivo correcto según la selección
+            if(os === 'windows') {
+                downloadLink = "descargas/Instalar_TalkPOS_v1.0.0.exe";
+            } else if(os === 'android') {
+                downloadLink = "descargas/TalkPOS_v1.0.0.apk";
+            } else {
+                // Por si entran directamente sin parámetro
+                downloadLink = "talkpos.html"; 
+            }
+
+            // Actualizar el enlace manual
+            document.getElementById('enlace-manual').href = downloadLink;
+
+            // Iniciar descarga automática después de 2 segundos
+            if(os === 'windows' || os === 'android') {
+                setTimeout(() => {
+                    window.location.href = downloadLink;
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
