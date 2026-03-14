@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - TalkPOS | TalkBot Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Poppins', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-800">TalkBot Solutions</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="index.html#servicios" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                        <a href="projects.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                        <a href="index.html#nosotros" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+                        <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <div class="lg:col-span-7 space-y-8">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="user" class="text-blue-600 mr-3"></i> 1. Tus Datos y Envío
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="sm:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
+                            <input type="text" id="nombreCliente" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none" placeholder="Juan Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefonoCliente" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none" placeholder="834 123 4567">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico</label>
+                            <input type="email" id="correoCliente" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none" placeholder="juan@ejemplo.com">
+                        </div>
+                        <div class="sm:col-span-2" id="campoDireccion">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Dirección de Envío (Solo para Kits físicos)</label>
+                            <textarea id="direccionCliente" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none" placeholder="Calle, Número, Colonia, Ciudad, C.P."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="credit-card" class="text-blue-600 mr-3"></i> 2. Método de Pago
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <label class="flex items-start p-5 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition relative" onclick="cambiarMetodoPago('tarjeta')">
+                            <div class="flex items-center h-5">
+                                <input id="radioTarjeta" name="metodo_pago" type="radio" class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-600" checked>
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <span class="block text-lg font-bold text-gray-900">Tarjeta de Crédito / Débito</span>
+                                <span class="block text-sm text-gray-500 mt-1">Pago inmediato y seguro. Aceptamos Visa, Mastercard y Amex.</span>
+                            </div>
+                            <div class="absolute right-5 top-5 flex space-x-2">
+                                <i data-feather="credit-card" class="text-gray-400"></i>
+                            </div>
+                        </label>
+
+                        <label class="flex items-start p-5 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition relative" onclick="cambiarMetodoPago('transferencia')">
+                            <div class="flex items-center h-5">
+                                <input id="radioTransferencia" name="metodo_pago" type="radio" class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-600">
+                            </div>
+                            <div class="ml-4 flex-grow">
+                                <span class="block text-lg font-bold text-gray-900">Transferencia SPEI / Oxxo</span>
+                                <span class="block text-sm text-gray-500 mt-1">Realiza tu depósito y envíanos el comprobante por WhatsApp.</span>
+                            </div>
+                            <div class="absolute right-5 top-5">
+                                <i data-feather="smartphone" class="text-gray-400"></i>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="mt-8">
+                        <div id="panelTarjeta" class="block">
+                            <button class="w-full bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-black transition shadow-lg text-lg flex justify-center items-center">
+                                <i data-feather="lock" class="w-5 h-5 mr-2"></i> Pagar de forma segura
+                            </button>
+                            <p class="text-center text-xs text-gray-500 mt-3 flex justify-center items-center">
+                                Pagos procesados encriptadamente por <strong class="ml-1">Stripe</strong>
+                            </p>
+                        </div>
+
+                        <div id="panelTransferencia" class="hidden bg-blue-50 border border-blue-100 p-6 rounded-xl">
+                            <h3 class="font-bold text-blue-900 mb-4 text-center">Datos para Transferencia o Depósito</h3>
+                            <div class="bg-white p-4 rounded-lg mb-6 border border-blue-100 text-sm text-gray-700 space-y-2">
+                                <p><strong>Banco:</strong> BBVA Bancomer (Ejemplo)</p>
+                                <p><strong>Titular:</strong> TalkBot Solutions / José</p>
+                                <p><strong>Cuenta:</strong> 0123456789</p>
+                                <p><strong>CLABE (SPEI):</strong> 012 345 67890123456 7</p>
+                            </div>
+                            <button onclick="enviarWhatsApp()" class="w-full bg-green-500 text-white py-4 rounded-xl font-bold hover:bg-green-600 transition shadow-lg text-lg flex justify-center items-center">
+                                <i data-feather="message-circle" class="w-6 h-6 mr-2"></i> Enviar comprobante por WhatsApp
+                            </button>
+                            <p class="text-center text-xs text-blue-600 mt-3">
+                                Al hacer clic, se abrirá WhatsApp con el resumen de tu pedido.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 sticky top-10">
+                    <h2 class="text-xl font-bold text-gray-800 mb-6 border-b pb-4">Resumen de tu pedido</h2>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="w-24 h-24 bg-gray-100 rounded-lg flex-shrink-0 overflow-hidden border border-gray-200">
+                            <img src="./images/talkpos-preview.png" alt="TalkPOS" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h3 id="productoTitulo" class="font-bold text-gray-800 text-lg">Cargando producto...</h3>
+                            <p id="productoDesc" class="text-sm text-gray-500 mt-1 line-clamp-2">Por favor espera un momento.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-sm text-gray-600 mb-6 border-b pb-6">
+                        <div class="flex justify-between">
+                            <span>Subtotal</span>
+                            <span id="precioSubtotal" class="font-medium">$0.00 MXN</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Envío</span>
+                            <span class="text-green-600 font-medium">Gratis</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-lg font-bold text-gray-800">Total a pagar</span>
+                        <span id="precioTotal" class="text-3xl font-extrabold text-blue-600">$0.00</span>
+                    </div>
+                    <p class="text-right text-sm text-gray-500 font-medium">MXN</p>
+                    
+                    <div class="mt-8 bg-gray-50 p-4 rounded-xl flex items-start">
+                        <i data-feather="shield" class="text-green-600 w-6 h-6 flex-shrink-0 mr-3"></i>
+                        <p class="text-xs text-gray-600"><strong>Compra 100% segura.</strong> Cuentas con soporte técnico directo de TalkBot Solutions para la instalación y configuración de tu sistema.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="cpu" class="text-blue-400 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold">TalkBot Solutions</span>
+                    </div>
+                    <p class="text-gray-400">Soluciones digitales para hacer crecer tu negocio en la era digital.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Automatización de Procesos</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Diseño y Desarrollo Web</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Desarrollo de Sistemas a Medida</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2026 TalkBot Solutions. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
+                    <a href="https://www.instagram.com/talkbot_solutions?igsh=dDJ3cXNpYXljaWFo" target="_blank" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        // Variables globales para el resumen
+        let productoActual = "";
+        let precioActual = "";
+
+        // Lógica de lectura de URL
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const opcion = urlParams.get('opcion');
+            
+            const elTitulo = document.getElementById('productoTitulo');
+            const elDesc = document.getElementById('productoDesc');
+            const elSubtotal = document.getElementById('precioSubtotal');
+            const elTotal = document.getElementById('precioTotal');
+            const campoDireccion = document.getElementById('campoDireccion');
+
+            if(opcion === 'compra-licencia') {
+                productoActual = "Licencia TalkPOS (Solo Software)";
+                precioActual = "$1,790.00";
+                elTitulo.innerText = productoActual;
+                elDesc.innerText = "Licencia vitalicia. Incluye actualizaciones. (No incluye hardware)";
+                // Opcional: Ocultar campo de dirección si solo es software digital
+                // campoDireccion.style.display = 'none'; 
+            } 
+            else if(opcion === 'compra-kit') {
+                productoActual = "Kit Punto de Venta Básico";
+                precioActual = "$2,900.00";
+                elTitulo.innerText = productoActual;
+                elDesc.innerText = "Licencia TalkPOS + Lector de Códigos + Impresora Térmica + 10 Rollos";
+            } 
+            else if(opcion === 'compra-full') {
+                productoActual = "Solución Completa: Kit Tablet + TalkPOS";
+                precioActual = "$4,400.00";
+                elTitulo.innerText = productoActual;
+                elDesc.innerText = "Tablet con teclado/mouse + Licencia + Lector + Impresora + 10 Rollos";
+            }
+            else {
+                // Por defecto si entran sin parámetro
+                productoActual = "TalkPOS Punto de Venta";
+                precioActual = "$0.00";
+                elTitulo.innerText = "Selecciona un producto";
+                elDesc.innerText = "Regresa a la página anterior para seleccionar tu paquete.";
+            }
+
+            elSubtotal.innerText = precioActual + " MXN";
+            elTotal.innerText = precioActual;
+        });
+
+        // Alternar paneles de pago
+        function cambiarMetodoPago(metodo) {
+            const panelTarjeta = document.getElementById('panelTarjeta');
+            const panelTransferencia = document.getElementById('panelTransferencia');
+            
+            if(metodo === 'tarjeta') {
+                panelTarjeta.classList.remove('hidden');
+                panelTarjeta.classList.add('block');
+                panelTransferencia.classList.remove('block');
+                panelTransferencia.classList.add('hidden');
+            } else {
+                panelTarjeta.classList.remove('block');
+                panelTarjeta.classList.add('hidden');
+                panelTransferencia.classList.remove('hidden');
+                panelTransferencia.classList.add('block');
+            }
+        }
+
+        // Función inteligente para armar el mensaje de WhatsApp
+        function enviarWhatsApp() {
+            const nombre = document.getElementById('nombreCliente').value || "Cliente";
+            const dir = document.getElementById('direccionCliente').value || "Dirección pendiente";
+            
+            // Construir el mensaje formateado
+            const mensaje = `¡Hola! Acabo de hacer una transferencia/depósito.%0A%0A*Detalles de mi pedido:*%0A📦 Producto: ${productoActual}%0A💵 Total a pagar: ${precioActual}%0A👤 Nombre: ${nombre}%0A📍 Dirección: ${dir}%0A%0AAdjunto mi comprobante de pago por aquí.`;
+            
+            // Redirigir a WhatsApp
+            const urlWA = `https://wa.me/528341672550?text=${mensaje}`;
+            window.open(urlWA, '_blank');
+        }
+    </script>
+</body>
+</html>
