@@ -45,7 +45,7 @@
                 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                        <i data-feather="user" class="text-blue-600 mr-3"></i> 1. Tus Datos y Envío
+                        <i data-feather="user" class="text-blue-600 mr-3"></i> 1. Tus Datos de Envío
                     </h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="sm:col-span-2">
@@ -69,65 +69,29 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                        <i data-feather="credit-card" class="text-blue-600 mr-3"></i> 2. Método de Pago
+                        <i data-feather="smartphone" class="text-blue-600 mr-3"></i> 2. Método de Pago
                     </h2>
                     
-                    <div class="space-y-4">
-                        <label class="flex items-start p-5 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition relative" onclick="cambiarMetodoPago('tarjeta')">
-                            <div class="flex items-center h-5">
-                                <input id="radioTarjeta" name="metodo_pago" type="radio" class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-600" checked>
-                            </div>
-                            <div class="ml-4 flex-grow">
-                                <span class="block text-lg font-bold text-gray-900">Tarjeta de Crédito / Débito</span>
-                                <span class="block text-sm text-gray-500 mt-1">Pago inmediato y seguro. Aceptamos Visa, Mastercard y Amex.</span>
-                            </div>
-                            <div class="absolute right-5 top-5 flex space-x-2">
-                                <i data-feather="credit-card" class="text-gray-400"></i>
-                            </div>
-                        </label>
-
-                        <label class="flex items-start p-5 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition relative" onclick="cambiarMetodoPago('transferencia')">
-                            <div class="flex items-center h-5">
-                                <input id="radioTransferencia" name="metodo_pago" type="radio" class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-600">
-                            </div>
-                            <div class="ml-4 flex-grow">
-                                <span class="block text-lg font-bold text-gray-900">Transferencia SPEI / Depósito</span>
-                                <span class="block text-sm text-gray-500 mt-1">Realiza tu depósito y envíanos el comprobante por WhatsApp.</span>
-                            </div>
-                            <div class="absolute right-5 top-5">
-                                <i data-feather="smartphone" class="text-gray-400"></i>
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="mt-8">
-                        <div id="panelTarjeta" class="block">
-                            <button class="w-full bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-black transition shadow-lg text-lg flex justify-center items-center">
-                                <i data-feather="lock" class="w-5 h-5 mr-2"></i> Pagar de forma segura
-                            </button>
-                            <p class="text-center text-xs text-gray-500 mt-3 flex justify-center items-center">
-                                Pagos procesados encriptadamente por <strong class="ml-1">Stripe</strong>
-                            </p>
+                    <div class="bg-blue-50 border border-blue-100 p-6 rounded-xl">
+                        <h3 class="font-bold text-blue-900 mb-4 text-center">Datos para Transferencia SPEI o Depósito</h3>
+                        <div class="bg-white p-5 rounded-lg mb-6 border border-blue-100 text-sm text-gray-800 space-y-3">
+                            <p class="flex justify-between border-b pb-2"><strong>Banco:</strong> <span>BBVA</span></p>
+                            <p class="flex justify-between border-b pb-2"><strong>Titular:</strong> <span>José Luis Tristán Aguilar</span></p>
+                            <p class="flex justify-between border-b pb-2"><strong>Cuenta:</strong> <span>1576019754</span></p>
+                            <p class="flex justify-between"><strong>CLABE (SPEI):</strong> <span class="font-mono font-bold text-blue-700">012 180 01576019754 1</span></p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-6 flex items-start">
+                            <i data-feather="alert-circle" class="text-yellow-600 w-6 h-6 mr-3 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-yellow-800">Una vez realizado tu pago, haz clic en el botón de abajo para enviarnos tus datos y tu comprobante por WhatsApp.</p>
                         </div>
 
-                        <div id="panelTransferencia" class="hidden bg-blue-50 border border-blue-100 p-6 rounded-xl">
-                            <h3 class="font-bold text-blue-900 mb-4 text-center">Datos para Transferencia o Depósito</h3>
-                            <div class="bg-white p-4 rounded-lg mb-6 border border-blue-100 text-sm text-gray-700 space-y-2">
-                                <p><strong>Banco:</strong> BBVA</p>
-                                <p><strong>Titular:</strong> José Luis Tristán Aguilar</p>
-                                <p><strong>Cuenta:</strong> 1576019754</p>
-                                <p><strong>CLABE (SPEI):</strong> 012 180 01576019754 1</p>
-                            </div>
-                            <button onclick="enviarWhatsApp()" class="w-full bg-green-500 text-white py-4 rounded-xl font-bold hover:bg-green-600 transition shadow-lg text-lg flex justify-center items-center">
-                                <i data-feather="message-circle" class="w-6 h-6 mr-2"></i> Enviar comprobante por WhatsApp
-                            </button>
-                            <p class="text-center text-xs text-blue-600 mt-3">
-                                Al hacer clic, se abrirá WhatsApp con el resumen de tu pedido.
-                            </p>
-                        </div>
+                        <button onclick="enviarWhatsApp()" class="w-full bg-green-500 text-white py-4 rounded-xl font-bold hover:bg-green-600 transition shadow-lg text-lg flex justify-center items-center">
+                            <i data-feather="message-circle" class="w-6 h-6 mr-2"></i> Confirmar pago por WhatsApp
+                        </button>
                     </div>
-
                 </div>
+
             </div>
 
             <div class="lg:col-span-5">
@@ -222,14 +186,13 @@
     <script>
         feather.replace();
 
-        // Variables globales para el resumen
         let productoActual = "";
         let precioActual = "";
+        let parametroOpcion = ""; 
 
-        // Lógica de lectura de URL
         document.addEventListener("DOMContentLoaded", () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const opcion = urlParams.get('opcion');
+            parametroOpcion = urlParams.get('opcion');
             
             const elTitulo = document.getElementById('productoTitulo');
             const elDesc = document.getElementById('productoDesc');
@@ -237,28 +200,26 @@
             const elTotal = document.getElementById('precioTotal');
             const campoDireccion = document.getElementById('campoDireccion');
 
-            if(opcion === 'compra-licencia') {
-                productoActual = "Licencia TalkPOS (Solo Software)";
+            if(parametroOpcion === 'compra-licencia') {
+                productoActual = "Licencia TalkPOS";
                 precioActual = "$1,790.00";
                 elTitulo.innerText = productoActual;
                 elDesc.innerText = "Licencia vitalicia. Incluye actualizaciones. (No incluye hardware)";
-                // Opcional: Ocultar campo de dirección si solo es software digital
-                // campoDireccion.style.display = 'none'; 
+                campoDireccion.style.display = 'none'; 
             } 
-            else if(opcion === 'compra-kit') {
+            else if(parametroOpcion === 'compra-kit') {
                 productoActual = "Kit Punto de Venta Básico";
                 precioActual = "$2,900.00";
                 elTitulo.innerText = productoActual;
-                elDesc.innerText = "Licencia TalkPOS + Lector de Códigos + Impresora Térmica + 10 Rollos";
+                elDesc.innerText = "Licencia TalkPOS + Lector + Impresora Térmica + 10 Rollos. Incluye actualizaciones.";
             } 
-            else if(opcion === 'compra-full') {
+            else if(parametroOpcion === 'compra-full') {
                 productoActual = "Solución Completa: Kit Tablet + TalkPOS";
                 precioActual = "$4,400.00";
                 elTitulo.innerText = productoActual;
-                elDesc.innerText = "Tablet con teclado/mouse + Licencia + Lector + Impresora + 10 Rollos";
+                elDesc.innerText = "Licencia TalkPOS + Tablet con teclado/mouse + Lector + Impresora Térmica + 10 Rollos. Incluye actualizaciones.";
             }
             else {
-                // Por defecto si entran sin parámetro
                 productoActual = "TalkPOS Punto de Venta";
                 precioActual = "$0.00";
                 elTitulo.innerText = "Selecciona un producto";
@@ -269,33 +230,31 @@
             elTotal.innerText = precioActual;
         });
 
-        // Alternar paneles de pago
-        function cambiarMetodoPago(metodo) {
-            const panelTarjeta = document.getElementById('panelTarjeta');
-            const panelTransferencia = document.getElementById('panelTransferencia');
-            
-            if(metodo === 'tarjeta') {
-                panelTarjeta.classList.remove('hidden');
-                panelTarjeta.classList.add('block');
-                panelTransferencia.classList.remove('block');
-                panelTransferencia.classList.add('hidden');
-            } else {
-                panelTarjeta.classList.remove('block');
-                panelTarjeta.classList.add('hidden');
-                panelTransferencia.classList.remove('hidden');
-                panelTransferencia.classList.add('block');
-            }
-        }
-
-        // Función inteligente para armar el mensaje de WhatsApp
         function enviarWhatsApp() {
-            const nombre = document.getElementById('nombreCliente').value || "Cliente";
-            const dir = document.getElementById('direccionCliente').value || "Dirección pendiente";
+            const nombre = document.getElementById('nombreCliente').value.trim();
+            const telefono = document.getElementById('telefonoCliente').value.trim();
+            const correo = document.getElementById('correoCliente').value.trim();
+            const dir = document.getElementById('direccionCliente').value.trim();
             
-            // Construir el mensaje formateado
-            const mensaje = `¡Hola! Acabo de hacer una transferencia/depósito.%0A%0A*Detalles de mi pedido:*%0A📦 Producto: ${productoActual}%0A💵 Total a pagar: ${precioActual}%0A👤 Nombre: ${nombre}%0A📍 Dirección: ${dir}%0A%0AAdjunto mi comprobante de pago por aquí.`;
+            if(!nombre) {
+                alert("Por favor ingresa tu nombre para procesar tu pedido.");
+                document.getElementById('nombreCliente').focus();
+                return;
+            }
+
+            let mensaje = `¡Hola! Acabo de hacer una transferencia.%0A%0A*Detalles de mi pedido:*%0A📦 Producto: ${productoActual}%0A💵 Total a pagar: ${precioActual}%0A%0A*Mis Datos:*%0A👤 Nombre: ${nombre}%0A📱 Teléfono: ${telefono || "No especificado"}%0A✉️ Correo: ${correo || "No especificado"}`;
             
-            // Redirigir a WhatsApp
+            if(parametroOpcion !== 'compra-licencia') {
+                 if(!dir) {
+                    alert("Por favor ingresa tu dirección de envío completa para mandar tu hardware.");
+                    document.getElementById('direccionCliente').focus();
+                    return;
+                 }
+                 mensaje += `%0A📍 Dirección: ${dir}`;
+            }
+
+            mensaje += `%0A%0AAdjunto mi comprobante de pago por aquí.`;
+            
             const urlWA = `https://wa.me/528341672550?text=${mensaje}`;
             window.open(urlWA, '_blank');
         }
