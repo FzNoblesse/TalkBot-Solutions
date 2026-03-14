@@ -24,7 +24,7 @@
         .gradient-bg { background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%); }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 flex flex-col min-h-screen">
     
     <nav class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,9 +101,9 @@
         </div>
     </section>
     
-    <section id="descargas" class="py-20 bg-white">
+    <section id="descargas" class="py-20 bg-gray-50 border-b border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-50 border border-gray-200 p-10 rounded-3xl shadow-sm text-center" data-aos="fade-up">
+            <div class="bg-white border border-gray-200 p-10 rounded-3xl shadow-sm text-center" data-aos="fade-up">
                 <div class="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wide">
                     Prueba Gratuita
                 </div>
@@ -118,7 +118,7 @@
                     Descargar Prueba Gratuita
                 </a>
                 <div class="mt-8 text-center">
-                    <p class="text-sm text-gray-500 bg-white inline-block px-6 py-3 rounded-lg border border-gray-200">
+                    <p class="text-sm text-gray-500 bg-gray-50 inline-block px-6 py-3 rounded-lg border border-gray-200">
                         <i data-feather="info" class="w-4 h-4 inline-block mr-1 mb-1 text-blue-500"></i>
                         Al terminar los 7 días de prueba, el sistema solicitará el pago de la licencia. <strong>Tus datos y tu inventario se mantendrán intactos al adquirir tu licencia definitiva.</strong>
                     </p>
@@ -126,9 +126,9 @@
             </div>
         </div>
     </section>
-    
-    <section id="precios" class="py-20 bg-gray-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <section id="precios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">
                     Equipa tu negocio hoy mismo
@@ -138,10 +138,28 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">    
-                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition flex flex-col" data-aos="fade-right">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-gray-800">Solo Licencia</h3>
+                    <p class="text-gray-500 mt-2">Para quienes ya tienen su propia computadora</p>
+                    <div class="mt-6 mb-8">
+                        <span class="text-5xl font-extrabold text-gray-900">$1,790</span>
+                        <span class="text-gray-500 font-medium"> MXN</span>
+                    </div>
+                    <ul class="space-y-4 text-gray-600 flex-grow mb-8">
+                        <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5 mt-1 flex-shrink-0"></i> <span>Licencia vitalicia de <strong>TalkPOS</strong></span></li>
+                        <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5 mt-1 flex-shrink-0"></i> <span>Uso en PC o dispositivo Android</span></li>
+                        <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5 mt-1 flex-shrink-0"></i> <span>Actualizaciones de software incluidas</span></li>
+                    </ul>
+                    <a href="adquirir-talkpos.html?opcion=compra-licencia" target="_blank" class="w-full bg-gray-200 text-gray-800 text-center py-4 rounded-xl font-bold hover:bg-gray-300 transition">
+                        Comprar Solo Licencia
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition flex flex-col" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-bold text-gray-800">Kit Punto de Venta</h3>
-                    <p class="text-gray-500 mt-2">Ideal si ya cuentas con tu propia computadora</p>
+                    <p class="text-gray-500 mt-2">Agrega el hardware a tu equipo actual</p>
                     <div class="mt-6 mb-8">
                         <span class="text-5xl font-extrabold text-gray-900">$2,900</span>
                         <span class="text-gray-500 font-medium"> MXN</span>
@@ -152,15 +170,15 @@
                         <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5 mt-1 flex-shrink-0"></i> <span>Impresora térmica de tickets</span></li>
                         <li class="flex items-start"><i data-feather="check" class="text-green-500 mr-3 w-5 h-5 mt-1 flex-shrink-0"></i> <span>10 rollos térmicos incluidos</span></li>
                     </ul>
-                    <a href="https://wa.me/528341672550?text=Hola,%20me%20interesa%20adquirir%20el%20Kit%20Punto%20de%20Venta%20de%20$2,900" target="_blank" class="w-full bg-blue-100 text-blue-700 text-center py-4 rounded-xl font-bold hover:bg-blue-200 transition">
+                    <a href="adquirir-talkpos.html?opcion=compra-kit" target="_blank" class="w-full bg-blue-100 text-blue-700 text-center py-4 rounded-xl font-bold hover:bg-blue-200 transition">
                         Comprar Kit Punto de Venta
                     </a>
                 </div>
 
-                <div class="bg-white border-2 border-blue-600 rounded-2xl p-8 shadow-xl relative flex flex-col transform md:-translate-y-4" data-aos="fade-left">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Solución Completa</div>
+                <div class="bg-white border-2 border-blue-600 rounded-2xl p-8 shadow-xl relative flex flex-col transform lg:-translate-y-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide whitespace-nowrap">Solución Completa</div>
                     <h3 class="text-2xl font-bold text-gray-800">Kit Tablet + TalkPOS</h3>
-                    <p class="text-gray-500 mt-2">Todo lo que necesitas para empezar a vender hoy</p>
+                    <p class="text-gray-500 mt-2">Todo listo para empezar a vender</p>
                     <div class="mt-6 mb-8">
                         <span class="text-5xl font-extrabold text-blue-600">$4,400</span>
                         <span class="text-gray-500 font-medium"> MXN</span>
@@ -172,7 +190,7 @@
                         <li class="flex items-start"><i data-feather="check" class="text-blue-600 mr-3 w-5 h-5 mt-1 font-bold flex-shrink-0"></i> <span>Impresora térmica de tickets</span></li>
                         <li class="flex items-start"><i data-feather="check" class="text-blue-600 mr-3 w-5 h-5 mt-1 font-bold flex-shrink-0"></i> <span>10 rollos térmicos incluidos</span></li>
                     </ul>
-                    <a href="https://wa.me/528341672550?text=Hola,%20me%20interesa%20adquirir%20el%20Kit%20Completo%20(Tablet%20+%20TalkPOS)%20de%20$4,400" target="_blank" class="w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">
+                    <a href="adquirir-talkpos.html?opcion=compra-full" target="_blank" class="w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg">
                         Comprar Solución Completa
                     </a>
                 </div>
@@ -180,7 +198,7 @@
         </div>
     </section>
     
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-12 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
