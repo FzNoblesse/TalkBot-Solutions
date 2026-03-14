@@ -11,19 +11,31 @@
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
-    <nav class="bg-white shadow-sm p-4 text-center">
-        <a href="index.html" class="inline-flex items-center text-xl font-bold text-gray-800">
-            <i data-feather="cpu" class="text-blue-600 w-8 h-8 mr-2"></i> TalkBot Solutions
-        </a>
-        <div class="hidden md:block">
-            <div class="ml-10 flex items-center space-x-4">
-            <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-            <a href="index.html#servicios" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
-            <a href="projects.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
-            <a href="index.html#nosotros" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
-            <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-800">TalkBot Solutions</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="index.html#servicios" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                        <a href="projects.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                        <a href="index.html#nosotros" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+                        <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
     </nav>
 
     <main class="flex-grow flex items-center justify-center py-12 px-4 text-center">
@@ -40,76 +52,31 @@
                 <a href="#" id="enlace-manual" class="font-bold text-blue-600 underline mt-2 inline-block">Descargar manualmente</a>
             </div>
 
-            <a href="talkpos.html" class="text-gray-500 hover:text-blue-600 font-medium transition">
-                <i data-feather="arrow-left" class="w-4 h-4 inline pb-1"></i> Volver a la página principal
+            <a href="talkpos.html" class="text-gray-500 hover:text-blue-600 font-medium transition inline-flex items-center">
+                <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i> Volver a la página principal
             </a>
         </div>
     </main>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <i data-feather="cpu" class="text-blue-400 w-8 h-8"></i>
-                        <span class="ml-2 text-xl font-bold">TalkBot Solutions</span>
-                    </div>
-                    <p class="text-gray-400">Soluciones digitales para hacer crecer tu negocio en la era digital.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Servicios</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Automatización de Procesos</a></li>
-                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Diseño y Desarrollo Web</a></li>
-                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Desarrollo de Sistemas a Medida</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Empresa</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
-                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trabaja con nosotros</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aviso legal</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2026 TalkBot Solutions. Todos los derechos reservados.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
-                    <a href="https://www.instagram.com/talkbot_solutions?igsh=dDJ3cXNpYXljaWFo" target="_blank" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
-                </div>
-            </div>
-        </div>
+    <footer class="bg-white border-t border-gray-200 py-6 text-center mt-auto">
+        <p class="text-gray-500 text-sm">© 2026 TalkBot Solutions. Todos los derechos reservados.</p>
     </footer>
 
     <script>
         feather.replace();
 
-        // Lógica para iniciar la descarga automáticamente
+        // Lógica para iniciar la descarga automáticamente con los nuevos nombres
         document.addEventListener("DOMContentLoaded", () => {
             const urlParams = new URLSearchParams(window.location.search);
             const os = urlParams.get('os');
             let downloadLink = "";
 
-            // Asignar el archivo correcto según la selección
+            // Asignar el archivo correcto con los nombres actualizados
             if(os === 'windows') {
                 downloadLink = "descargas/Instalar_TalkPOS.exe";
             } else if(os === 'android') {
                 downloadLink = "descargas/TalkPOS.apk";
             } else {
-                // Por si entran directamente sin parámetro
                 downloadLink = "talkpos.html"; 
             }
 
