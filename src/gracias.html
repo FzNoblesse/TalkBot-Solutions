@@ -65,13 +65,11 @@
     <script>
         feather.replace();
 
-        // Lógica para iniciar la descarga automáticamente con los nuevos nombres
         document.addEventListener("DOMContentLoaded", () => {
             const urlParams = new URLSearchParams(window.location.search);
             const os = urlParams.get('os');
             let downloadLink = "";
-
-            // Asignar el archivo correcto con los nombres actualizados
+            
             if(os === 'windows') {
                 downloadLink = "descargas/Instalar_TalkPOS.exe";
             } else if(os === 'android') {
@@ -80,10 +78,8 @@
                 downloadLink = "talkpos.html"; 
             }
 
-            // Actualizar el enlace manual
             document.getElementById('enlace-manual').href = downloadLink;
 
-            // Iniciar descarga automática después de 2 segundos
             if(os === 'windows' || os === 'android') {
                 setTimeout(() => {
                     window.location.href = downloadLink;
