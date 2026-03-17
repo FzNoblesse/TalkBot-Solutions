@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuestros Proyectos - TalkBot Solutions</title>
+  
   <link rel="icon" type="image/png" href="./images/favicon-96x96.png?v=3" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="./images/favicon.svg?v=3" />
   <link rel="shortcut icon" href="./images/favicon.ico?v=3" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png?v=3" />
   <link rel="manifest" href="./images/site.webmanifest" />
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -25,14 +26,17 @@
   </style>
 </head>
 <body class="bg-gray-50">
-  <!-- Navbar -->
+
   <nav class="bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-20 items-center">
         <div class="flex items-center">
-          <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
-          <span class="ml-2 text-xl font-bold text-gray-800">TalkBot Solutions</span>
+          <a href="index.html" class="flex items-center">
+            <i data-feather="cpu" class="text-blue-600 w-8 h-8"></i>
+            <span class="ml-2 text-xl font-bold text-gray-800">TalkBot Solutions</span>
+          </a>
         </div>
+        
         <div class="hidden md:block">
           <div class="ml-10 flex items-center space-x-4">
             <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
@@ -42,11 +46,16 @@
             <a href="index.html#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
           </div>
         </div>
+        
+        <div class="md:hidden">
+            <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
   <header class="gradient-bg text-black py-20">
     <div class="max-w-7xl mx-auto px-4 text-center" data-aos="fade-up">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">Nuestros Proyectos</h1>
@@ -56,7 +65,6 @@
     </div>
   </header>
 
-  <!-- Projects grid -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-10">
@@ -98,7 +106,6 @@
     </div>
   </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
@@ -112,16 +119,16 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Servicios</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Automatización de Procesos</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diseño y Desarrollo Web</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Desarrollo de Sistemas a Medida</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Automatización de Procesos</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Diseño y Desarrollo Web</a></li>
+                        <li><a href="index.html#servicios" class="text-gray-400 hover:text-white transition">Desarrollo de Sistemas a Medida</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-4">Empresa</h3>
                     <ul class="space-y-2">
-                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
-                        <li><a href="#proyectos" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
+                        <li><a href="index.html#nosotros" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Trabaja con nosotros</a></li>
                     </ul>
@@ -136,11 +143,11 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2025 TalkBot Solutions. Todos los derechos reservados.</p>
+                <p class="text-gray-400 mb-4 md:mb-0">© 2026 TalkBot Solutions. Todos los derechos reservados.</p>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="facebook"></i></a>
                     <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="twitter"></i></a>
-                    <a href="https://www.instagram.com/talkbot_solutions?igsh=dDJ3cXNpYXljaWFo" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
+                    <a href="https://www.instagram.com/talkbot_solutions?igsh=dDJ3cXNpYXljaWFo" target="_blank" class="text-gray-400 hover:text-white transition"><i data-feather="instagram"></i></a>
                     <a href="#" class="text-gray-400 hover:text-white transition"><i data-feather="linkedin"></i></a>
                 </div>
             </div>
